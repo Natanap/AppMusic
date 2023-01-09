@@ -12,8 +12,11 @@
 		2C21F31B296B85AE00D87AF7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C21F31A296B85AE00D87AF7 /* HomeViewController.swift */; };
 		2C21F320296B85B200D87AF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C21F31F296B85B200D87AF7 /* Assets.xcassets */; };
 		2C21F323296B85B200D87AF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C21F321296B85B200D87AF7 /* LaunchScreen.storyboard */; };
-		2C21F331296B8A4600D87AF7 /* Extension in Resources */ = {isa = PBXBuildFile; fileRef = 2C21F330296B8A4600D87AF7 /* Extension */; };
-		2C21F333296B8A5000D87AF7 /* Model in Resources */ = {isa = PBXBuildFile; fileRef = 2C21F332296B8A5000D87AF7 /* Model */; };
+		2C21F33D296B903600D87AF7 /* HomeViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C21F33C296B903600D87AF7 /* HomeViewScreen.swift */; };
+		2C21F340296B90B800D87AF7 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C21F33F296B90B800D87AF7 /* UIView + Extension.swift */; };
+		2C21F342296B90C100D87AF7 /* NSTextAttachment + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C21F341296B90C100D87AF7 /* NSTextAttachment + Extension.swift */; };
+		2C21F344296B90C400D87AF7 /* NSAttributedString + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C21F343296B90C400D87AF7 /* NSAttributedString + Extension.swift */; };
+		2C21F347296B90D700D87AF7 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C21F346296B90D700D87AF7 /* CardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +27,11 @@
 		2C21F31F296B85B200D87AF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C21F322296B85B200D87AF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C21F324296B85B200D87AF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C21F330296B8A4600D87AF7 /* Extension */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Extension; sourceTree = "<group>"; };
-		2C21F332296B8A5000D87AF7 /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
+		2C21F33C296B903600D87AF7 /* HomeViewScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewScreen.swift; sourceTree = "<group>"; };
+		2C21F33F296B90B800D87AF7 /* UIView + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		2C21F341296B90C100D87AF7 /* NSTextAttachment + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextAttachment + Extension.swift"; sourceTree = "<group>"; };
+		2C21F343296B90C400D87AF7 /* NSAttributedString + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString + Extension.swift"; sourceTree = "<group>"; };
+		2C21F346296B90D700D87AF7 /* CardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +64,59 @@
 		2C21F315296B85AE00D87AF7 /* AppMusic */ = {
 			isa = PBXGroup;
 			children = (
-				2C21F332296B8A5000D87AF7 /* Model */,
-				2C21F330296B8A4600D87AF7 /* Extension */,
+				2C21F339296B901600D87AF7 /* Home */,
 				2C21F316296B85AE00D87AF7 /* AppDelegate.swift */,
 				2C21F318296B85AE00D87AF7 /* SceneDelegate.swift */,
-				2C21F31A296B85AE00D87AF7 /* HomeViewController.swift */,
 				2C21F31F296B85B200D87AF7 /* Assets.xcassets */,
 				2C21F321296B85B200D87AF7 /* LaunchScreen.storyboard */,
 				2C21F324296B85B200D87AF7 /* Info.plist */,
 			);
 			path = AppMusic;
+			sourceTree = "<group>";
+		};
+		2C21F339296B901600D87AF7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2C21F345296B90CE00D87AF7 /* Model */,
+				2C21F33E296B90AE00D87AF7 /* Extension+ */,
+				2C21F33B296B902400D87AF7 /* Controller */,
+				2C21F33A296B901D00D87AF7 /* Screen */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2C21F33A296B901D00D87AF7 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				2C21F33C296B903600D87AF7 /* HomeViewScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		2C21F33B296B902400D87AF7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C21F31A296B85AE00D87AF7 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2C21F33E296B90AE00D87AF7 /* Extension+ */ = {
+			isa = PBXGroup;
+			children = (
+				2C21F343296B90C400D87AF7 /* NSAttributedString + Extension.swift */,
+				2C21F341296B90C100D87AF7 /* NSTextAttachment + Extension.swift */,
+				2C21F33F296B90B800D87AF7 /* UIView + Extension.swift */,
+			);
+			path = "Extension+";
+			sourceTree = "<group>";
+		};
+		2C21F345296B90CE00D87AF7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C21F346296B90D700D87AF7 /* CardViewModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,8 +179,6 @@
 			files = (
 				2C21F323296B85B200D87AF7 /* LaunchScreen.storyboard in Resources */,
 				2C21F320296B85B200D87AF7 /* Assets.xcassets in Resources */,
-				2C21F333296B8A5000D87AF7 /* Model in Resources */,
-				2C21F331296B8A4600D87AF7 /* Extension in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +191,12 @@
 			files = (
 				2C21F31B296B85AE00D87AF7 /* HomeViewController.swift in Sources */,
 				2C21F317296B85AE00D87AF7 /* AppDelegate.swift in Sources */,
+				2C21F342296B90C100D87AF7 /* NSTextAttachment + Extension.swift in Sources */,
 				2C21F319296B85AE00D87AF7 /* SceneDelegate.swift in Sources */,
+				2C21F347296B90D700D87AF7 /* CardViewModel.swift in Sources */,
+				2C21F340296B90B800D87AF7 /* UIView + Extension.swift in Sources */,
+				2C21F344296B90C400D87AF7 /* NSAttributedString + Extension.swift in Sources */,
+				2C21F33D296B903600D87AF7 /* HomeViewScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
