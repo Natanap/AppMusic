@@ -14,6 +14,7 @@ class HomeViewScreen: UIView {
         tv.separatorStyle = .none
         tv.tableFooterView = UIView()
         tv.showsVerticalScrollIndicator = false
+        tv.register(CardViewTableViewCell.self, forCellReuseIdentifier: CardViewTableViewCell.identifier)
         return tv
     }()
     

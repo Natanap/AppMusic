@@ -116,10 +116,8 @@ class CustomCardView: UIView {
         return label
     }()
     
-    init(viewMode: ViewMode, cardData: CardViewModel) {
+    init() {
         let frame = CGRect.zero
-        self.vmode = viewMode
-        self.dataModel = cardData
         super.init(frame: frame)
         self.addSubViews()
         self.setUpConstraints()
@@ -134,13 +132,13 @@ class CustomCardView: UIView {
         self.containerLeadingConstraints?.isActive = true
         
         self.containerTopConstraints = cardContainerView.topAnchor.constraint(equalTo: self.topAnchor, constant: 15)
-        self.containerLeadingConstraints?.isActive = true
-        
-        self.containerTrailingConstraints = cardContainerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30)
-        self.containerLeadingConstraints?.isActive = true
+        self.containerTopConstraints?.isActive = true
         
         self.containerBottomConstraints = cardContainerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15)
-        self.containerLeadingConstraints?.isActive = true
+        self.containerBottomConstraints?.isActive = true
+        
+        self.containerTrailingConstraints = cardContainerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30)
+        self.containerTrailingConstraints?.isActive = true
         
         self.overlayView.pin(to: self.cardContainerView)
         self.cardImage.pin(to: self.cardContainerView)
@@ -184,9 +182,11 @@ class CustomCardView: UIView {
         self.addSubview(self.cardContainerView)
         self.cardContainerView.addSubview(self.cardImage)
         self.cardContainerView.addSubview(self.overlayView)
+        
         self.cardContainerView.addSubview(self.profileBorderView)
         self.cardContainerView.addSubview(self.cardProfilePicture)
         self.cardContainerView.addSubview(self.addProfileImageButton)
+        
         self.cardContainerView.addSubview(self.cardCategoryTitleLabel)
         self.cardContainerView.addSubview(self.cardCategoryDateLabel)
         self.cardContainerView.addSubview(self.cardTitleLabel)
@@ -206,8 +206,8 @@ class CustomCardView: UIView {
             self.descriptionTitleLabel.isHidden = true
             self.containerLeadingConstraints?.constant = 30
             self.containerTopConstraints?.constant = 15
-            self.containerTrailingConstraints?.constant = -15
-            self.containerBottomConstraints?.constant = -30
+            self.containerTrailingConstraints?.constant = -30
+            self.containerBottomConstraints?.constant = -15
         }
     }
     
