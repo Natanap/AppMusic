@@ -122,6 +122,7 @@ class CustomCardView: UIView {
         self.dataModel = cardData
         super.init(frame: frame)
         self.addSubViews()
+        self.setUpConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -208,5 +209,15 @@ class CustomCardView: UIView {
             self.containerTrailingConstraints?.constant = -15
             self.containerBottomConstraints?.constant = -30
         }
+    }
+    
+    public func setupView(data: CardViewModel) {
+        self.cardCategoryTitleLabel.text = data.categoryName
+        self.cardCategoryDateLabel.text = data.categoryDate
+        self.cardTitleLabel.text = data.cardTitle
+        self.likeAndTimeLabel.attributedText = NSAttributedString.featureText(data.likeCount ?? "", data.duration ?? "")
+        self.descriptionTitleLabel.text = data.cardDescription
+        self.cardImage.image = UIImage(named: data.cardImage ?? "")
+        self.cardProfilePicture.image = UIImage(named: data.categoryImage ?? "")
     }
 }
