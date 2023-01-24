@@ -76,46 +76,20 @@ class CustomCardView: UIView {
         return btn
     }()
     
-    lazy var cardCategoryTitleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 12, weight: .bold)
-        label.textColor = .white
-        return label
-    }()
+    lazy var cardCategoryTitleLabel = LabelDefault(font: UIFont.systemFont(ofSize: 12, weight: .bold), textColor: .white, textAligment: .natural)
+
+    lazy var cardCategoryDateLabel = LabelDefault(font: UIFont.systemFont(ofSize: 11, weight: .regular), textColor: .white, textAligment: .natural)
+
+    lazy var cardTitleLabel = LabelDefault(font: UIFont.systemFont(ofSize: 31, weight: .bold), textColor: .white, textAligment: .center)
     
-    lazy var cardCategoryDateLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 11, weight: .regular)
-        label.textColor = .white
-        return label
-    }()
-    
-    lazy var cardTitleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 31, weight: .bold)
-        label.textColor = .white
-        label.textAlignment = .center
-        return label
-    }()
-    
-    lazy var likeAndTimeLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    lazy var descriptionTitleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
-        label.textColor = .white
-        label.textAlignment = .center
+    lazy var likeAndTimeLabel = LabelDefault()
+
+    lazy var descriptionTitleLabel: LabelDefault = {
+        let label = LabelDefault(font: UIFont.systemFont(ofSize: 16, weight: .regular), textColor: .white, textAligment: .center)
         label.numberOfLines = 0
         return label
     }()
+    
     
     init() {
         let frame = CGRect.zero

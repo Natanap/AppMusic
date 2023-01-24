@@ -11,25 +11,24 @@ class LabelDefault: UILabel {
 
     init() {
         super.init(frame: .zero)
-        
-        initDefault(text: "" , font: UIFont.systemFont(ofSize: 17, weight: .semibold), textColor: .black, textAligment: textAlignment)
+
+        initDefault(font: UIFont.systemFont(ofSize: 17, weight: .semibold), textColor: .white, textAligment: NSTextAlignment.natural)
     }
+
     
-    
-    init(text: String, font: UIFont, textColor: UIColor, textAligment: NSTextAlignment?) {
+    init( font: UIFont, textColor: UIColor, textAligment: NSTextAlignment) {
         super.init(frame: .zero)
-        initDefault(text: text, font: font, textColor: textColor, textAligment: textAligment)
+        initDefault(font: font, textColor: textColor, textAligment: textAligment)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func initDefault(text: String, font: UIFont , textColor: UIColor, textAligment: NSTextAlignment?) {
-        self.text = text
+    private func initDefault(font: UIFont , textColor: UIColor, textAligment: NSTextAlignment) {
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.textColor = .black
+        self.textColor = textColor
         self.font = font
-        self.textAlignment = textAlignment
+        self.textAlignment = textAligment
     }
 }

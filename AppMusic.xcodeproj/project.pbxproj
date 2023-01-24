@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2C006C592980917A0066C818 /* CardActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C006C582980917A0066C818 /* CardActionView.swift */; };
-		2C006C5C298093CC0066C818 /* ViewDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C006C5B298093CC0066C818 /* ViewDefault.swift */; };
 		2C006C5E2980958D0066C818 /* LabelDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C006C5D2980958D0066C818 /* LabelDefault.swift */; };
 		2C21F317296B85AE00D87AF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C21F316296B85AE00D87AF7 /* AppDelegate.swift */; };
 		2C21F319296B85AE00D87AF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C21F318296B85AE00D87AF7 /* SceneDelegate.swift */; };
@@ -27,7 +26,6 @@
 
 /* Begin PBXFileReference section */
 		2C006C582980917A0066C818 /* CardActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardActionView.swift; sourceTree = "<group>"; };
-		2C006C5B298093CC0066C818 /* ViewDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDefault.swift; sourceTree = "<group>"; };
 		2C006C5D2980958D0066C818 /* LabelDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDefault.swift; sourceTree = "<group>"; };
 		2C21F313296B85AE00D87AF7 /* AppMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C21F316296B85AE00D87AF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +58,6 @@
 		2C006C5A298093A40066C818 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				2C006C5B298093CC0066C818 /* ViewDefault.swift */,
 				2C006C5D2980958D0066C818 /* LabelDefault.swift */,
 			);
 			path = Components;
@@ -245,7 +242,6 @@
 				2C21F317296B85AE00D87AF7 /* AppDelegate.swift in Sources */,
 				2C5F1B4B297C487500C8A504 /* Enum+.swift in Sources */,
 				2C21F342296B90C100D87AF7 /* NSTextAttachment + Extension.swift in Sources */,
-				2C006C5C298093CC0066C818 /* ViewDefault.swift in Sources */,
 				2C21F319296B85AE00D87AF7 /* SceneDelegate.swift in Sources */,
 				2C21F347296B90D700D87AF7 /* CardViewModel.swift in Sources */,
 				2C21F340296B90B800D87AF7 /* UIView + Extension.swift in Sources */,
