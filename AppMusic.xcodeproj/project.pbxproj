@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C006C592980917A0066C818 /* CardActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C006C582980917A0066C818 /* CardActionView.swift */; };
+		2C006C5C298093CC0066C818 /* ViewDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C006C5B298093CC0066C818 /* ViewDefault.swift */; };
+		2C006C5E2980958D0066C818 /* LabelDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C006C5D2980958D0066C818 /* LabelDefault.swift */; };
 		2C21F317296B85AE00D87AF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C21F316296B85AE00D87AF7 /* AppDelegate.swift */; };
 		2C21F319296B85AE00D87AF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C21F318296B85AE00D87AF7 /* SceneDelegate.swift */; };
 		2C21F31B296B85AE00D87AF7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C21F31A296B85AE00D87AF7 /* HomeViewController.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C006C582980917A0066C818 /* CardActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardActionView.swift; sourceTree = "<group>"; };
+		2C006C5B298093CC0066C818 /* ViewDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDefault.swift; sourceTree = "<group>"; };
+		2C006C5D2980958D0066C818 /* LabelDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDefault.swift; sourceTree = "<group>"; };
 		2C21F313296B85AE00D87AF7 /* AppMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C21F316296B85AE00D87AF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C21F318296B85AE00D87AF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C006C5A298093A40066C818 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2C006C5B298093CC0066C818 /* ViewDefault.swift */,
+				2C006C5D2980958D0066C818 /* LabelDefault.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		2C21F30A296B85AE00D87AF7 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +85,7 @@
 		2C21F315296B85AE00D87AF7 /* AppMusic */ = {
 			isa = PBXGroup;
 			children = (
+				2C006C5A298093A40066C818 /* Components */,
 				2C5F1B49297C485A00C8A504 /* Enum */,
 				2C40AC0629797D2A00195D5D /* CustomView */,
 				2C21F33E296B90AE00D87AF7 /* Extension+ */,
@@ -140,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				2C40AC0729797D4A00195D5D /* CustomCardView.swift */,
+				2C006C582980917A0066C818 /* CardActionView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -224,14 +241,17 @@
 			files = (
 				2C40AC0529797BFD00195D5D /* CardViewTableViewCell.swift in Sources */,
 				2C21F31B296B85AE00D87AF7 /* HomeViewController.swift in Sources */,
+				2C006C592980917A0066C818 /* CardActionView.swift in Sources */,
 				2C21F317296B85AE00D87AF7 /* AppDelegate.swift in Sources */,
 				2C5F1B4B297C487500C8A504 /* Enum+.swift in Sources */,
 				2C21F342296B90C100D87AF7 /* NSTextAttachment + Extension.swift in Sources */,
+				2C006C5C298093CC0066C818 /* ViewDefault.swift in Sources */,
 				2C21F319296B85AE00D87AF7 /* SceneDelegate.swift in Sources */,
 				2C21F347296B90D700D87AF7 /* CardViewModel.swift in Sources */,
 				2C21F340296B90B800D87AF7 /* UIView + Extension.swift in Sources */,
 				2C40AC0829797D4A00195D5D /* CustomCardView.swift in Sources */,
 				2C21F344296B90C400D87AF7 /* NSAttributedString + Extension.swift in Sources */,
+				2C006C5E2980958D0066C818 /* LabelDefault.swift in Sources */,
 				2C21F33D296B903600D87AF7 /* HomeViewScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,7 +406,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -412,7 +432,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

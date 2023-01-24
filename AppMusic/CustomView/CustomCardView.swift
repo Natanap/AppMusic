@@ -52,6 +52,7 @@ class CustomCardView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .clear
         view.layer.borderWidth = 1
+        view.layer.cornerRadius = 20
         view.layer.borderColor = UIColor.white.cgColor
         return view
     }()

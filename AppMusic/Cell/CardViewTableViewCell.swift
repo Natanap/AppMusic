@@ -28,6 +28,7 @@ class CardViewTableViewCell: UITableViewCell {
     public func setupCell(data: CardViewModel) {
         self.cardView.setupView(data: data)
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
