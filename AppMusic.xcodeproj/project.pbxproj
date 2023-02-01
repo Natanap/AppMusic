@@ -21,6 +21,8 @@
 		2C21F347296B90D700D87AF7 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C21F346296B90D700D87AF7 /* CardViewModel.swift */; };
 		2C40AC0529797BFD00195D5D /* CardViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C40AC0429797BFD00195D5D /* CardViewTableViewCell.swift */; };
 		2C40AC0829797D4A00195D5D /* CustomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C40AC0729797D4A00195D5D /* CustomCardView.swift */; };
+		2C57FC8F2989E7B200F71632 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C57FC8E2989E7B200F71632 /* DetailViewController.swift */; };
+		2C57FC922989E7EB00F71632 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C57FC912989E7EB00F71632 /* DetailView.swift */; };
 		2C5F1B4B297C487500C8A504 /* Enum+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F1B4A297C487500C8A504 /* Enum+.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		2C21F346296B90D700D87AF7 /* CardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		2C40AC0429797BFD00195D5D /* CardViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewTableViewCell.swift; sourceTree = "<group>"; };
 		2C40AC0729797D4A00195D5D /* CustomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardView.swift; sourceTree = "<group>"; };
+		2C57FC8E2989E7B200F71632 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2C57FC912989E7EB00F71632 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		2C5F1B4A297C487500C8A504 /* Enum+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enum+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +86,7 @@
 		2C21F315296B85AE00D87AF7 /* AppMusic */ = {
 			isa = PBXGroup;
 			children = (
+				2C57FC8D2989E77500F71632 /* Detail */,
 				2C006C5A298093A40066C818 /* Components */,
 				2C5F1B49297C485A00C8A504 /* Enum */,
 				2C40AC0629797D2A00195D5D /* CustomView */,
@@ -156,6 +161,23 @@
 				2C006C582980917A0066C818 /* CardActionView.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		2C57FC8D2989E77500F71632 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				2C57FC902989E7BE00F71632 /* DetailView */,
+				2C57FC8E2989E7B200F71632 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		2C57FC902989E7BE00F71632 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				2C57FC912989E7EB00F71632 /* DetailView.swift */,
+			);
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 		2C5F1B49297C485A00C8A504 /* Enum */ = {
@@ -249,6 +271,8 @@
 				2C21F344296B90C400D87AF7 /* NSAttributedString + Extension.swift in Sources */,
 				2C006C5E2980958D0066C818 /* LabelDefault.swift in Sources */,
 				2C21F33D296B903600D87AF7 /* HomeViewScreen.swift in Sources */,
+				2C57FC922989E7EB00F71632 /* DetailView.swift in Sources */,
+				2C57FC8F2989E7B200F71632 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
