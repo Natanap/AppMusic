@@ -7,10 +7,17 @@
 
 import UIKit
 
+protocol DetailViewDelegate: AnyObject {
+    func tappedCloseButton()
+    
+}
 class DetailView: UIView {
 
     var cardModel: CardViewModel?
     var navBarTopAnchor: NSLayoutConstraint?
+    
+    private weak var delegate: DetailViewDelegate?
+    
     
     lazy var scrollView:UIScrollView = {
         let view = UIScrollView(frame: .zero)
@@ -56,11 +63,16 @@ class DetailView: UIView {
     
     
     @objc func closePressed() {
-        
+        self.delegate?.tappedCloseButton()
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(dataView: CardViewModel) {
+        super.init(frame: CGRect())
+        self.cardModel = dataView        
+        DispatchQueue.main.async {
+            self.setUpView()
+            self.setUpConstraints()
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -81,7 +93,7 @@ class DetailView: UIView {
             .first?.windows.filter({$0.isKeyWindow}).first
         
         let topPading = window?.safeAreaInsets.top
-        print(topPading)
+        print(topPading as Any)
         
         self.scrollView.pin(to: self)
         
@@ -97,6 +109,17 @@ class DetailView: UIView {
             self.tableView.widthAnchor.constraint(equalToConstant: self.frame.size.width),
             self.tableView.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor),
             
+            self.closeBtn.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            self.closeBtn.widthAnchor.constraint(equalToConstant: 30),
+            self.closeBtn.heightAnchor.constraint(equalToConstant: 30),
+            self.closeBtn.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor,constant: 10),
         ])
+    }
+    
+    public func configAllDelegates(tableViewDelegate: UITableViewDelegate, tableViewDataSource: UITableViewDataSource, scrollViewDelegate: UIScrollViewDelegate, detailViewScreenDelegate: DetailViewDelegate) {
+        self.tableView.delegate = tableViewDelegate
+        self.tableView.dataSource = tableViewDataSource
+        self.scrollView.delegate = scrollViewDelegate
+        self.delegate = detailViewScreenDelegate
     }
 }
