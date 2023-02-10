@@ -12,7 +12,7 @@ class CardViewTableViewCell: UITableViewCell {
     static let identifier:String = "CardViewTableViewCell"
     
     lazy var cardView: CustomCardView = {
-        let view = CustomCardView()
+        let view = CustomCardView(mode: .card)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.clipsToBounds = true
         return view

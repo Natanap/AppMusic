@@ -96,11 +96,12 @@ class CustomCardView: UIView {
         return v
     }()
     
-    init() {
+    init(mode: ViewMode) {
         let frame = CGRect.zero
         super.init(frame: frame)
         self.addSubViews()
         self.setUpConstraints()
+        self.updateLayout(for: mode)
     }
     
     required init?(coder: NSCoder) {
@@ -179,7 +180,6 @@ class CustomCardView: UIView {
         self.cardContainerView.addSubview(self.descriptionTitleLabel)
         self.cardContainerView.addSubview(self.actionsView)
         
-        self.updateLayout(for: self.vmode ?? .card)
     }
     
     private func updateLayout(for mode: ViewMode) {

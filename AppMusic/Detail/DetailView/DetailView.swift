@@ -31,9 +31,8 @@ class DetailView: UIView {
     }()
     
     lazy var cardView: CustomCardView = {
-        let view = CustomCardView()
+        let view = CustomCardView(mode: .full)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.actionsView.updateLayout(for: .full)
         view.cardContainerView.layer.cornerRadius = 0.00
         view.setupView(data: self.cardModel ?? CardViewModel())
         return view
@@ -66,7 +65,7 @@ class DetailView: UIView {
         self.delegate?.tappedCloseButton()
     }
     
-    init(dataView: CardViewModel) {
+    init(dataView: CardViewModel?) {
         super.init(frame: CGRect())
         self.cardModel = dataView        
         DispatchQueue.main.async {
@@ -103,7 +102,7 @@ class DetailView: UIView {
             self.cardView.heightAnchor.constraint(equalToConstant: 500),
             self.cardView.widthAnchor.constraint(equalToConstant: self.frame.size.width),
         
-            self.tableView.topAnchor.constraint(equalTo: self.cardView.topAnchor),
+            self.tableView.topAnchor.constraint(equalTo: self.cardView.bottomAnchor),
             self.tableView.centerXAnchor.constraint(equalTo: self.scrollView.centerXAnchor),
             self.tableView.heightAnchor.constraint(equalToConstant: CGFloat((80 * (cardModel?.cardList?.count ?? 0)) + 20)),
             self.tableView.widthAnchor.constraint(equalToConstant: self.frame.size.width),
