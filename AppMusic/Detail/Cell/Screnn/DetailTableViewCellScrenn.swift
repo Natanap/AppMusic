@@ -57,6 +57,7 @@ class DetailTableViewCellScrenn: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupViews()
+        self.setupConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -84,8 +85,22 @@ class DetailTableViewCellScrenn: UIView {
             self.subTitleLabel.leadingAnchor.constraint(equalTo: self.thumbImage.trailingAnchor,constant: 15),
             self.subTitleLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 4),
             
+            self.moreBtn.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
+            self.moreBtn.widthAnchor.constraint(equalToConstant: 35),
+            self.moreBtn.heightAnchor.constraint(equalToConstant: 35),
+            self.moreBtn.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             
-        
+            self.likeBtn.trailingAnchor.constraint(equalTo: self.moreBtn.leadingAnchor, constant: -15),
+            self.likeBtn.widthAnchor.constraint(equalToConstant: 35),
+            self.heightAnchor.constraint(equalToConstant: 35),
+            self.likeBtn.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            
         ])
+    }
+    
+    public func setupCell(data: CardListModel){
+        self.titleLabel.text = data.listTitle
+        self.subTitleLabel.text = data.listSubtitle
+        self.thumbImage.image = UIImage(named: data.listImage ?? "")
     }
 }

@@ -45,6 +45,7 @@ class DetailView: UIView {
         tv.separatorStyle = .none
         tv.showsVerticalScrollIndicator = false
         tv.isScrollEnabled = false
+        tv.register(DetailTableViewCell.self, forCellReuseIdentifier: DetailTableViewCell.identifier)
         tv.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         return tv
     }()
