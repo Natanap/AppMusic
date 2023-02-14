@@ -81,7 +81,7 @@ class DetailView: UIView {
     
     private func setUpView() {
         self.addSubview(self.scrollView)
-        self.scrollView.addSubview(cardView)
+        self.scrollView.addSubview(self.cardView)
         self.scrollView.addSubview(self.tableView)
         self.addSubview(self.closeBtn)
     }

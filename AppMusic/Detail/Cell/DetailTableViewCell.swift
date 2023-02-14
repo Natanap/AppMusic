@@ -30,4 +30,8 @@ class DetailTableViewCell: UITableViewCell {
     private func setupConstraints() {
         self.screen.pin(to: self.contentView)
     }
+    
+    public func setupCell(data: CardListModel) {
+        self.screen.setupCell(data: data)
+    }
 }

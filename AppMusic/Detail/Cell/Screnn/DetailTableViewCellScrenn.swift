@@ -92,7 +92,7 @@ class DetailTableViewCellScrenn: UIView {
             
             self.likeBtn.trailingAnchor.constraint(equalTo: self.moreBtn.leadingAnchor, constant: -15),
             self.likeBtn.widthAnchor.constraint(equalToConstant: 35),
-            self.heightAnchor.constraint(equalToConstant: 35),
+            self.likeBtn.heightAnchor.constraint(equalToConstant: 35),
             self.likeBtn.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             
         ])
