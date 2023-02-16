@@ -28,6 +28,24 @@ class DetailViewController: UIViewController {
  
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let window = UIApplication.shared.connectedScenes
+            .filter({$0.activationState == .foregroundActive})
+            .compactMap ({$0 as? UIWindowScene})
+            .first?.windows.filter({$0.isKeyWindow}).first
+        
+        let topPading = window?.safeAreaInsets.top
+        
+        if scrollView.contentOffset.y >= 300 {
+            self.screen?.navBarTopAnchor?.constant = 0
+        }else {
+            self.screen?.navBarTopAnchor?.constant = -((topPading ?? 0.0) + 80)
+        }
+        
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut) {
+            self.view.layoutIfNeeded()
+        }
+    }
 
 }
 

@@ -38,6 +38,14 @@ class DetailView: UIView {
         return view
     }()
     
+    lazy var navBar: CustomNavBar = {
+       let view = CustomNavBar()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .black
+        view.setupView(data: self.cardModel ?? CardViewModel())
+        return view
+    }()
+    
     lazy var tableView: UITableView = {
         let tv = UITableView()
         tv.translatesAutoresizingMaskIntoConstraints = false
@@ -83,6 +91,7 @@ class DetailView: UIView {
         self.addSubview(self.scrollView)
         self.scrollView.addSubview(self.cardView)
         self.scrollView.addSubview(self.tableView)
+        self.addSubview(self.navBar)
         self.addSubview(self.closeBtn)
     }
     
@@ -113,7 +122,15 @@ class DetailView: UIView {
             self.closeBtn.widthAnchor.constraint(equalToConstant: 30),
             self.closeBtn.heightAnchor.constraint(equalToConstant: 30),
             self.closeBtn.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor,constant: 10),
+            
+            self.navBar.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.navBar.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.navBar.heightAnchor.constraint(equalToConstant: ((topPading ?? 0.0) + 80)),
+            
         ])
+        
+        self.navBarTopAnchor = self.navBar.topAnchor.constraint(equalTo: self.topAnchor, constant: -((topPading ?? 0.0) + 60))
+        self.navBarTopAnchor?.isActive = true
     }
     
     public func configAllDelegates(tableViewDelegate: UITableViewDelegate, tableViewDataSource: UITableViewDataSource, scrollViewDelegate: UIScrollViewDelegate, detailViewScreenDelegate: DetailViewDelegate) {
