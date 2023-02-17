@@ -15,6 +15,7 @@ class DetailView: UIView {
 
     var cardModel: CardViewModel?
     var navBarTopAnchor: NSLayoutConstraint?
+    var playViewBottomAnchor: NSLayoutConstraint?
     
     private weak var delegate: DetailViewDelegate?
     
@@ -69,6 +70,11 @@ class DetailView: UIView {
         return btn
     }()
     
+    lazy var playView: CustomPlayerView = {
+        let view = CustomPlayerView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
     @objc func closePressed() {
         self.delegate?.tappedCloseButton()
@@ -93,6 +99,7 @@ class DetailView: UIView {
         self.scrollView.addSubview(self.tableView)
         self.addSubview(self.navBar)
         self.addSubview(self.closeBtn)
+        self.addSubview(self.playView)
     }
     
     private func setUpConstraints() {
@@ -127,10 +134,16 @@ class DetailView: UIView {
             self.navBar.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.navBar.heightAnchor.constraint(equalToConstant: ((topPading ?? 0.0) + 80)),
             
+            self.playView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.playView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.playView.heightAnchor.constraint(equalToConstant: 120),
         ])
         
         self.navBarTopAnchor = self.navBar.topAnchor.constraint(equalTo: self.topAnchor, constant: -((topPading ?? 0.0) + 60))
         self.navBarTopAnchor?.isActive = true
+        
+        self.playViewBottomAnchor = self.playView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 120)
+        self.playViewBottomAnchor?.isActive = true
     }
     
     public func configAllDelegates(tableViewDelegate: UITableViewDelegate, tableViewDataSource: UITableViewDataSource, scrollViewDelegate: UIScrollViewDelegate, detailViewScreenDelegate: DetailViewDelegate) {
@@ -139,4 +152,6 @@ class DetailView: UIView {
         self.scrollView.delegate = scrollViewDelegate
         self.delegate = detailViewScreenDelegate
     }
+    
+    
 }
